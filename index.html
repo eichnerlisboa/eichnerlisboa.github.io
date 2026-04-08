@@ -1,34 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kevin Eichner de Lemos Lisboa — Aerodynamics & Simulation Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-  <header>
-    <nav class="container">
-      <a href="index.html" class="nav-logo">KEL</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="nav-links">
-          <a href="#about"><span data-lang="en" class="active lang-inline">About</span><span data-lang="de" class="lang-inline">Über mich</span></a>
-          <a href="#projects"><span data-lang="en" class="active lang-inline">Projects</span><span data-lang="de" class="lang-inline">Projekte</span></a>
-          <a href="#skills">Skills</a>
-          <a href="#experience"><span data-lang="en" class="active lang-inline">Experience</span><span data-lang="de" class="lang-inline">Erfahrung</span></a>
-          <a href="#education"><span data-lang="en" class="active lang-inline">Education</span><span data-lang="de" class="lang-inline">Bildung</span></a>
-          <a href="#contact">Contact</a>
-          <button class="lang-btn" id="lang-toggle">DE</button>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <header data-include="sections/header.html"></header>
 
   <!-- HERO -->
   <section id="hero">
@@ -41,8 +27,12 @@
             <span data-lang="en" class="active lang-inline">Aerodynamics &amp; Simulation Engineer</span>
             <span data-lang="de" class="lang-inline">Aerodynamiker und Simulationsingenieur</span>
           </p>
-          <p class="hero-bio" data-lang="en">Combining CFD simulation with wind tunnel validation to deliver measurable performance gains. M.Sc. Aerospace Engineering, TU Berlin. Former head of aerodynamics at FaSTTUBe Formula Student team.</p>
-          <p class="hero-bio" data-lang="de">Als Aerodynamik-Ingenieur verbinde ich fundierte numerische Strömungssimulation mit Windkanal-Validierung, um die Performance messbar zu steigern. M.Sc. Luft- und Raumfahrttechnik, TU Berlin.</p>
+          <p class="hero-bio" data-lang="en">Combining CFD simulation with wind tunnel validation to deliver measurable
+            performance gains. M.Sc. Aerospace Engineering, TU Berlin. Former head of aerodynamics at FaSTTUBe Formula
+            Student team.</p>
+          <p class="hero-bio" data-lang="de">Als Aerodynamik-Ingenieur verbinde ich fundierte numerische
+            Strömungssimulation mit Windkanal-Validierung, um die Performance messbar zu steigern. M.Sc. Luft- und
+            Raumfahrttechnik, TU Berlin.</p>
           <div class="hero-links">
             <a href="https://www.linkedin.com/in/eichner-lisboa/" target="_blank" class="btn btn-primary">LinkedIn</a>
             <!-- <a href="https://github.com/" target="_blank" class="btn btn-outline">GitHub</a> -->
@@ -55,23 +45,27 @@
       </div>
     </div>
   </section>
-  
+
   <div data-include="sections/about.html"></div>
   <div data-include="sections/skills.html"></div>
   <div data-include="sections/projects.html"></div>
   <div data-include="sections/experience.html"></div>
   <div data-include="sections/education.html"></div>
 
+
   <!-- CONTACT -->
   <section id="contact">
     <div class="container fade-in">
       <p class="section-label">Contact</p>
       <div class="contact-form">
-        <p style="font-size:15px;font-weight:300;color:var(--muted);margin-bottom:28px;line-height:1.7;" data-lang="en">Interested in working together or have a question? Send me a message and I'll get back to you.</p>
-        <p style="font-size:15px;font-weight:300;color:var(--muted);margin-bottom:28px;line-height:1.7;" data-lang="de">Interesse an einer Zusammenarbeit oder eine Frage? Schreib mir eine Nachricht, ich melde mich zurück.</p>
+        <p style="font-size:15px;font-weight:300;color:var(--muted);margin-bottom:28px;line-height:1.7;" data-lang="en">
+          Interested in working together or have a question? Send me a message and I'll get back to you.</p>
+        <p style="font-size:15px;font-weight:300;color:var(--muted);margin-bottom:28px;line-height:1.7;" data-lang="de">
+          Interesse an einer Zusammenarbeit oder eine Frage? Schreib mir eine Nachricht, ich melde mich zurück.</p>
         <div class="form-row">
           <div class="form-group">
-            <label for="contact-name"><span data-lang="en" class="active lang-inline">Name</span><span data-lang="de" class="lang-inline">Name</span></label>
+            <label for="contact-name"><span data-lang="en" class="active lang-inline">Name</span><span data-lang="de"
+                class="lang-inline">Name</span></label>
             <input type="text" id="contact-name" placeholder="Your name" />
           </div>
           <div class="form-group">
@@ -80,19 +74,23 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="contact-subject"><span data-lang="en" class="active lang-inline">Subject</span><span data-lang="de" class="lang-inline">Betreff</span></label>
+          <label for="contact-subject"><span data-lang="en" class="active lang-inline">Subject</span><span
+              data-lang="de" class="lang-inline">Betreff</span></label>
           <input type="text" id="contact-subject" placeholder="What's it about?" />
         </div>
         <div class="form-group">
-          <label for="contact-message"><span data-lang="en" class="active lang-inline">Message</span><span data-lang="de" class="lang-inline">Nachricht</span></label>
+          <label for="contact-message"><span data-lang="en" class="active lang-inline">Message</span><span
+              data-lang="de" class="lang-inline">Nachricht</span></label>
           <textarea id="contact-message" placeholder="Your message..."></textarea>
         </div>
         <button class="btn btn-primary" id="send-btn">
           <span data-lang="en" class="active lang-inline">Send message</span>
           <span data-lang="de" class="lang-inline">Nachricht senden</span>
         </button>
-        <p class="contact-note" data-lang="en">Prefer LinkedIn? Reach me at <a href="https://www.linkedin.com/in/eichner-lisboa/" target="_blank">/in/eichner-lisboa/</a></p>
-        <p class="contact-note" data-lang="de">Lieber LinkedIn? <a href="https://www.linkedin.com/in/eichner-lisboa/" target="_blank">/in/eichner-lisboa/</a></p>
+        <p class="contact-note" data-lang="en">Prefer LinkedIn? Reach me at <a
+            href="https://www.linkedin.com/in/eichner-lisboa/" target="_blank">/in/eichner-lisboa/</a></p>
+        <p class="contact-note" data-lang="de">Lieber LinkedIn? <a href="https://www.linkedin.com/in/eichner-lisboa/"
+            target="_blank">/in/eichner-lisboa/</a></p>
       </div>
     </div>
   </section>
@@ -106,8 +104,8 @@
   <script src="js/main.js"></script>
   <script>
     document.getElementById('send-btn').addEventListener('click', () => {
-      const name    = document.getElementById('contact-name').value.trim();
-      const email   = document.getElementById('contact-email').value.trim();
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
       const subject = document.getElementById('contact-subject').value.trim();
       const message = document.getElementById('contact-message').value.trim();
       if (!name || !email || !message) {
@@ -115,9 +113,10 @@
         return;
       }
       const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-      const sub  = encodeURIComponent(subject || 'Portfolio contact');
+      const sub = encodeURIComponent(subject || 'Portfolio contact');
       window.location.href = `mailto:k.lisboa@web.de?subject=${sub}&body=${body}`;
     });
   </script>
 </body>
+
 </html>
