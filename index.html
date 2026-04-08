@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,14 +13,19 @@
   <header>
     <nav class="container">
       <a href="index.html" class="nav-logo">KEL</a>
-      <div class="nav-links">
-        <a href="#about"><span data-lang="en" class="active lang-inline">About</span><span data-lang="de" class="lang-inline">Über mich</span></a>
-        <a href="#projects"><span data-lang="en" class="active lang-inline">Projects</span><span data-lang="de" class="lang-inline">Projekte</span></a>
-        <a href="#skills">Skills</a>
-        <a href="#experience"><span data-lang="en" class="active lang-inline">Experience</span><span data-lang="de" class="lang-inline">Erfahrung</span></a>
-        <a href="#education"><span data-lang="en" class="active lang-inline">Education</span><span data-lang="de" class="lang-inline">Bildung</span></a>
-        <a href="#contact">Contact</a>
-        <button class="lang-btn" id="lang-toggle">DE</button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="nav-links">
+          <a href="#about"><span data-lang="en" class="active lang-inline">About</span><span data-lang="de" class="lang-inline">Über mich</span></a>
+          <a href="#projects"><span data-lang="en" class="active lang-inline">Projects</span><span data-lang="de" class="lang-inline">Projekte</span></a>
+          <a href="#skills">Skills</a>
+          <a href="#experience"><span data-lang="en" class="active lang-inline">Experience</span><span data-lang="de" class="lang-inline">Erfahrung</span></a>
+          <a href="#education"><span data-lang="en" class="active lang-inline">Education</span><span data-lang="de" class="lang-inline">Bildung</span></a>
+          <a href="#contact">Contact</a>
+          <button class="lang-btn" id="lang-toggle">DE</button>
+        </div>
       </div>
     </nav>
   </header>
@@ -40,7 +45,7 @@
           <p class="hero-bio" data-lang="de">Als Aerodynamik-Ingenieur verbinde ich fundierte numerische Strömungssimulation mit Windkanal-Validierung, um die Performance messbar zu steigern. M.Sc. Luft- und Raumfahrttechnik, TU Berlin.</p>
           <div class="hero-links">
             <a href="https://www.linkedin.com/in/eichner-lisboa/" target="_blank" class="btn btn-primary">LinkedIn</a>
-            <a href="https://github.com/" target="_blank" class="btn btn-outline">GitHub</a>
+            <!-- <a href="https://github.com/" target="_blank" class="btn btn-outline">GitHub</a> -->
             <a href="Lebenslauf_Kevin_Eichner_Lisboa.pdf" download class="btn btn-outline">
               <span data-lang="en" class="active lang-inline">Download CV</span>
               <span data-lang="de" class="lang-inline">Lebenslauf</span>
@@ -50,284 +55,12 @@
       </div>
     </div>
   </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container fade-in">
-      <p class="section-label"><span data-lang="en" class="active lang-inline">About</span><span data-lang="de" class="lang-inline">Über mich</span></p>
-      <div class="about-grid">
-        <div class="about-text">
-          <p data-lang="en">I'm an aerospace engineer specialising in aerodynamics and CFD simulation. My work bridges the gap between numerical methods and real-world testing — designing, simulating, and validating aerodynamic systems with a focus on measurable performance outcomes.</p>
-          <p data-lang="en">Through my years with FaSTTUBe at TU Berlin, I led the aerodynamics department, managing a team of 15 and achieving a 25% increase in total downforce. My master's thesis conducted a comprehensive correlation study between RANS simulations and wind tunnel data across 120+ test cases.</p>
-          <p data-lang="de">Als Luft- und Raumfahrtingenieur mit Schwerpunkt Aerodynamik und CFD-Simulation verbinde ich numerische Methoden mit experimenteller Validierung — mit Fokus auf messbare Leistungssteigerungen komplexer aerodynamischer Systeme.</p>
-          <p data-lang="de">Bei FaSTTUBe (TU Berlin) leitete ich die Aerodynamikabteilung mit 15 Teammitgliedern und erzielte eine Abtriebssteigerung von 25%. Meine Masterarbeit umfasste eine Korrelationsstudie zwischen RANS-Simulationen und Windkanaldaten in über 120 Messfällen.</p>
-        </div>
-        <div class="about-meta">
-          <div class="meta-item">
-            <span class="meta-label"><span data-lang="en" class="active lang-inline">Location</span><span data-lang="de" class="lang-inline">Ort</span></span>
-            <span class="meta-value">Berlin, Germany</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label"><span data-lang="en" class="active lang-inline">Languages</span><span data-lang="de" class="lang-inline">Sprachen</span></span>
-            <span class="meta-value"><span data-lang="en" class="active lang-inline">German (native), English (fluent)</span><span data-lang="de" class="lang-inline">Deutsch (Muttersprache), Englisch (fließend)</span></span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label"><span data-lang="en" class="active lang-inline">Interests</span><span data-lang="de" class="lang-inline">Interessen</span></span>
-            <span class="meta-value"><span data-lang="en" class="active lang-inline">Climbing, Golf, Skiing, Badminton, DIY Electronics</span><span data-lang="de" class="lang-inline">Klettern, Golf, Ski, Badminton, DIY Elektronik</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container fade-in">
-      <p class="section-label">Skills</p>
-      <div class="skills-groups">
-        <div>
-          <p class="skill-group-label">CFD &amp; Simulation</p>
-          <div class="pills">
-            <span class="pill core">STAR-CCM+</span>
-            <span class="pill core">Ansys Fluent</span>
-            <span class="pill mid">RANS Simulation</span>
-            <span class="pill mid">Aerodynamic optimisation</span>
-            <span class="pill">Wind tunnel testing</span>
-            <span class="pill">PIV (Particle Image Velocimetry)</span>
-            <span class="pill">Experimental aerodynamics</span>
-          </div>
-        </div>
-        <div>
-          <p class="skill-group-label">CAD &amp; Engineering</p>
-          <div class="pills">
-            <span class="pill core">Siemens NX</span>
-            <span class="pill core">SolidWorks</span>
-            <span class="pill mid">Component design &amp; optimisation</span>
-          </div>
-        </div>
-        <div>
-          <p class="skill-group-label"><span data-lang="en" class="active lang-inline">Programming &amp; Data</span><span data-lang="de" class="lang-inline">Programmierung &amp; Daten</span></p>
-          <div class="pills">
-            <span class="pill core">Python</span>
-            <span class="pill core">MATLAB</span>
-            <span class="pill mid">Data analysis &amp; reporting</span>
-            <span class="pill mid">Workflow automation</span>
-            <span class="pill">AI development &amp; application</span>
-            <span class="pill">Microsoft Office</span>
-            <span class="pill mid" data-lang="de">Datenanalyse &amp; Berichterstellung</span>
-            <span class="pill mid" data-lang="de">Workflow-Automatisierung</span>
-            <span class="pill" data-lang="de">KI-Entwicklung &amp; Anwendung</span>
-            <span class="pill" data-lang="de">Microsoft Office</span>
-          </div>
-        </div>
-        <div>
-          <p class="skill-group-label"><span data-lang="en" class="active lang-inline">Leadership &amp; Management</span><span data-lang="de" class="lang-inline">Führung &amp; Management</span></p>
-          <div class="pills">
-            <span class="pill mid"><span data-lang="en" class="active lang-inline">Team management (up to 15 members)</span><span data-lang="de" class="lang-inline">Teamführung (bis zu 15 Mitglieder)</span></span>
-            <span class="pill mid"><span data-lang="en" class="active lang-inline">Budget planning</span><span data-lang="de" class="lang-inline">Budgetplanung</span></span>
-            <span class="pill"><span data-lang="en" class="active lang-inline">Milestone management</span><span data-lang="de" class="lang-inline">Meilenstein-Management</span></span>
-            <span class="pill"><span data-lang="en" class="active lang-inline">Interdisciplinary coordination</span><span data-lang="de" class="lang-inline">Interdisziplinäre Koordination</span></span>
-            <span class="pill"><span data-lang="en" class="active lang-inline">Project planning</span><span data-lang="de" class="lang-inline">Projektplanung</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container fade-in">
-      <p class="section-label"><span data-lang="en" class="active lang-inline">Projects</span><span data-lang="de" class="lang-inline">Projekte</span></p>
-      <div class="projects-grid">
-
-        <a href="projects/cfd-thesis.html" class="project-card">
-          <div class="project-thumb">
-            <span class="thumb-placeholder">Add image</span>
-          </div>
-          <div class="project-body">
-            <span class="project-tag">M.Sc. Thesis</span>
-            <h3>CFD &amp; Wind Tunnel Correlation</h3>
-            <p data-lang="en">Comprehensive RANS simulation correlated against wind tunnel data on a Formula Student race car. 120+ test cases.</p>
-            <p data-lang="de">Umfassende Korrelationsstudie zwischen RANS-Simulationen und Windkanaldaten eines Formula-Student-Rennwagens.</p>
-            <p class="project-highlight">STAR-CCM+ · TU Berlin · 2025</p>
-            <span class="read-more"><span data-lang="en" class="active lang-inline">Read more</span><span data-lang="de" class="lang-inline">Mehr lesen</span></span>
-          </div>
-        </a>
-
-        <a href="projects/fastube-aero.html" class="project-card">
-          <div class="project-thumb">
-            <span class="thumb-placeholder">Add image</span>
-          </div>
-          <div class="project-body">
-            <span class="project-tag">Formula Student</span>
-            <h3>FaSTTUBe Aerodynamics Package</h3>
-            <p data-lang="en">Full aerodynamic development of the FaSTTUBe race car. Led a team of 15, achieved +25% downforce and 2nd place at FSAE Michigan.</p>
-            <p data-lang="de">Entwicklung des kompletten Aerodynamik-Pakets des FaSTTUBe-Rennwagens. Teamleitung von 15 Personen, +25% Abtrieb.</p>
-            <p class="project-highlight">NX · STAR-CCM+ · 2021–present</p>
-            <span class="read-more"><span data-lang="en" class="active lang-inline">Read more</span><span data-lang="de" class="lang-inline">Mehr lesen</span></span>
-          </div>
-        </a>
-
-        <a href="projects/python-tools.html" class="project-card">
-          <div class="project-thumb">
-            <span class="thumb-placeholder">Add image</span>
-          </div>
-          <div class="project-body">
-            <span class="project-tag">Tool</span>
-            <h3>CFD Workflow Automation</h3>
-            <p data-lang="en">Python tools for automated CFD post-processing and data analysis, significantly accelerating design iteration loops.</p>
-            <p data-lang="de">Python-Skripte zur automatisierten Nachverarbeitung von CFD-Ergebnissen und Datenanalyse.</p>
-            <p class="project-highlight">Python · MATLAB · STAR-CCM+</p>
-            <span class="read-more"><span data-lang="en" class="active lang-inline">Read more</span><span data-lang="de" class="lang-inline">Mehr lesen</span></span>
-          </div>
-        </a>
-
-        <a href="projects/bsc-thesis.html" class="project-card">
-          <div class="project-thumb">
-            <span class="thumb-placeholder">Add image</span>
-          </div>
-          <div class="project-body">
-            <span class="project-tag">B.Sc. Thesis</span>
-            <h3>Aerodynamic Drag — Tube Transport</h3>
-            <p data-lang="en">Designed and built a custom test rig for measuring aerodynamic drag of a tube transport system at TU Berlin.</p>
-            <p data-lang="de">Entwicklung und Erprobung eines Versuchsstandes zur Luftwiderstandsmessung eines Röhrentransportsystems.</p>
-            <p class="project-highlight">SolidWorks · Experimental · TU Berlin · 2021</p>
-            <span class="read-more"><span data-lang="en" class="active lang-inline">Read more</span><span data-lang="de" class="lang-inline">Mehr lesen</span></span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container fade-in">
-      <p class="section-label"><span data-lang="en" class="active lang-inline">Experience</span><span data-lang="de" class="lang-inline">Arbeitserfahrung</span></p>
-      <div class="timeline">
-
-        <!-- FaSTTUBe: Head of Aero -->
-        <div class="tl-item">
-          <div class="tl-date">09/2021 – 08/2022</div>
-          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
-          <div class="tl-body">
-            <p class="tl-org">FaSTTUBe · Formula Student Team TU Berlin</p>
-            <p class="tl-role"><span data-lang="en" class="active lang-inline">Head of Aerodynamics</span><span data-lang="de" class="lang-inline">Leitung Aerodynamik</span></p>
-            <p class="tl-desc" data-lang="en">Strategic aerodynamic direction of the full vehicle and coordination of the entire aerodynamics department.</p>
-            <p class="tl-desc" data-lang="de">Strategische aerodynamische Ausrichtung des Gesamtfahrzeugs sowie Koordination des gesamten Fachbereichs.</p>
-            <ul class="tl-bullets">
-              <li><span data-lang="en" class="active lang-inline">Team management: technical and personnel leadership of 15 members</span><span data-lang="de" class="lang-inline">Teamleitung: fachliche und personelle Führung von 15 Teammitgliedern</span></li>
-              <li><span data-lang="en" class="active lang-inline">Performance: 25% increase in total downforce</span><span data-lang="de" class="lang-inline">Performance: 25%ige Steigerung des Gesamtabtriebs</span></li>
-              <li><span data-lang="en" class="active lang-inline">Project management: budget planning and milestone tracking from concept to manufacturing</span><span data-lang="de" class="lang-inline">Projektmanagement: Budgetplanung und Meilensteinverfolgung von der Konzeptphase bis zur Fertigung</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- FaSTTUBe: Bereichsleitung -->
-        <div class="tl-item">
-          <div class="tl-date">09/2022 – 08/2023</div>
-          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
-          <div class="tl-body">
-            <p class="tl-org">FaSTTUBe · Formula Student Team TU Berlin</p>
-            <p class="tl-role"><span data-lang="en" class="active lang-inline">Aerodynamics Performance Lead</span><span data-lang="de" class="lang-inline">Bereichsleitung Aerodynamik Performance</span></p>
-            <p class="tl-desc" data-lang="en">Full strategic and technical direction of the aerodynamics package, plus interdisciplinary interface coordination.</p>
-            <p class="tl-desc" data-lang="de">Gesamte strategische und technische Ausrichtung des Aerodynamik-Pakets sowie interdisziplinäre Schnittstellenkoordination.</p>
-            <ul class="tl-bullets">
-              <li><span data-lang="en" class="active lang-inline">Team management: personnel leadership of 5 members, coordination with suspension, powertrain, and chassis</span><span data-lang="de" class="lang-inline">Teamleitung: Führung von 5 Teammitgliedern und Koordination mit Fahrwerk, Antrieb, Chassis</span></li>
-              <li><span data-lang="en" class="active lang-inline">Performance: +20% downforce with simultaneous reduction in ride-height sensitivity</span><span data-lang="de" class="lang-inline">Performance: +20% Abtrieb bei gleichzeitiger Reduktion der Sensitivität gegenüber Fahrhöhenänderungen</span></li>
-              <li><span data-lang="en" class="active lang-inline">Development loop: steered the process from first CAD sketch (Siemens NX) through CFD (STAR-CCM+) to final design</span><span data-lang="de" class="lang-inline">Entwicklungsschleife: Steuerung von der ersten CAD-Skizze (NX) über CFD (STAR-CCM+) bis zum finalen Design</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- FaSTTUBe: Aero Design Engineer -->
-        <div class="tl-item">
-          <div class="tl-date">05/2019 – 08/2021<br>09/2023 – present</div>
-          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
-          <div class="tl-body">
-            <p class="tl-org">FaSTTUBe · Formula Student Team TU Berlin</p>
-            <p class="tl-role"><span data-lang="en" class="active lang-inline">Aero Design Engineer</span><span data-lang="de" class="lang-inline">Aero Design Engineer — Aerodynamik Performance</span></p>
-            <p class="tl-desc" data-lang="en">Detailed design and layout of individual aerodynamic components and digital development process acceleration.</p>
-            <p class="tl-desc" data-lang="de">Detaillierte Konstruktion und Auslegung einzelner Aerodynamik-Komponenten sowie Beschleunigung der digitalen Entwicklungsprozesse.</p>
-            <ul class="tl-bullets">
-              <li><span data-lang="en" class="active lang-inline">Development: design, analysis and optimisation of aerodynamic components (NX + STAR-CCM+)</span><span data-lang="de" class="lang-inline">Entwicklung: Konstruktion, Analyse und Optimierung aerodynamischer Bauteile</span></li>
-              <li><span data-lang="en" class="active lang-inline">Design success: 2nd place at FSAE Michigan Engineering Design Final — concept defence before F1 and automotive experts</span><span data-lang="de" class="lang-inline">Design-Erfolg: 2. Platz im Engineering Design Finale (FSAE Michigan, USA)</span></li>
-              <li><span data-lang="en" class="active lang-inline">Automation: Python tools for workflow automation and data analysis</span><span data-lang="de" class="lang-inline">Automatisierung: Entwicklung von Python-Tools zur Workflowautomatisierung und Datenanalyse</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- TU Berlin HiWi -->
-        <div class="tl-item">
-          <div class="tl-date">04/2021 – 05/2025</div>
-          <div class="tl-spine"><div class="tl-dot" style="background:var(--blue)"></div><div class="tl-line"></div></div>
-          <div class="tl-body">
-            <p class="tl-org">TU Berlin · FG Experimentelle Strömungsmechanik</p>
-            <p class="tl-role"><span data-lang="en" class="active lang-inline">Research Assistant</span><span data-lang="de" class="lang-inline">Studentische Hilfskraft</span></p>
-            <p class="tl-desc" data-lang="en">Supported academic research in fluid mechanics — preparation, execution and post-processing of experiments. Supervised by Prof. Dr.-Ing. C.O. Paschereit.</p>
-            <p class="tl-desc" data-lang="de">Unterstützung der akademischen Forschung bei strömungsmechanischen Experimenten. Betreut von Prof. Dr.-Ing. C.O. Paschereit.</p>
-            <ul class="tl-bullets">
-              <li><span data-lang="en" class="active lang-inline">Measurement technology: pressure and force sensors, PIV (Particle Image Velocimetry)</span><span data-lang="de" class="lang-inline">Messtechnik: Druck- und Kraftsensoren sowie PIV-Verfahren</span></li>
-              <li><span data-lang="en" class="active lang-inline">Data acquisition: processing and analysis of raw experimental data with MATLAB and Python</span><span data-lang="de" class="lang-inline">Datenerfassung: Aufbereitung und Analyse experimenteller Rohdaten mit MATLAB und Python</span></li>
-              <li><span data-lang="en" class="active lang-inline">Design: construction of test rig components in SolidWorks</span><span data-lang="de" class="lang-inline">Konstruktion: Konstruktion von Prüfstandskomponenten in SolidWorks</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Freiberger -->
-        <div class="tl-item">
-          <div class="tl-date">07/2016 – 09/2016</div>
-          <div class="tl-spine"><div class="tl-dot" style="background:var(--border)"></div><div class="tl-line"></div></div>
-          <div class="tl-body">
-            <p class="tl-org">Freiberger Lebensmittel GmbH</p>
-            <p class="tl-role"><span data-lang="en" class="active lang-inline">Internship — Metal Manufacturing</span><span data-lang="de" class="lang-inline">Praktikum in der Metallverarbeitung</span></p>
-            <p class="tl-desc" data-lang="en">Foundational manufacturing internship providing essential practical skills for later work on technical prototypes.</p>
-            <p class="tl-desc" data-lang="de">Grundpraktikum zur Vermittlung handwerklicher Fertigkeiten für spätere Arbeit an technischen Prototypen.</p>
-            <ul class="tl-bullets">
-              <li><span data-lang="en" class="active lang-inline">Manufacturing: basic skills in turning, milling, drilling and welding</span><span data-lang="de" class="lang-inline">Fertigung: Grundkenntnisse im Drehen, Fräsen, Bohren und Schweißen</span></li>
-              <li><span data-lang="en" class="active lang-inline">Plant maintenance: support in assembly and preventive maintenance of industrial equipment</span><span data-lang="de" class="lang-inline">Anlagenpflege: Unterstützung bei Montage und Wartung industrieller Großanlagen</span></li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="container fade-in">
-      <p class="section-label"><span data-lang="en" class="active lang-inline">Education</span><span data-lang="de" class="lang-inline">Bildung</span></p>
-      <div class="edu-grid">
-        <div class="edu-card">
-          <div>
-            <p class="edu-degree">M.Sc. Luft- und Raumfahrttechnik</p>
-            <p class="edu-school">TU Berlin · 2021 – 2025</p>
-            <p class="edu-desc" data-lang="en">Thesis: "A Combined Aerodynamic Investigation of Wind Tunnel Experiments and CFD Simulations of Formula Student Race Car" — supervised by Prof. Dr.-Ing. C.O. Paschereit &amp; Dr.-Ing. C.N. Nayeri.</p>
-            <p class="edu-desc" data-lang="de">Abschlussarbeit: „A Combined Aerodynamic Investigation of Wind Tunnel Experiments and CFD Simulations of Formula Student Race Car" — betreut von Prof. Dr.-Ing. C.O. Paschereit &amp; Dr.-Ing. C.N. Nayeri.</p>
-          </div>
-          <div class="edu-grade">1,5<span><span data-lang="en" class="active lang-inline">Grade</span><span data-lang="de" class="lang-inline">Note</span></span></div>
-        </div>
-        <div class="edu-card">
-          <div>
-            <p class="edu-degree">B.Sc. Maschinenbau</p>
-            <p class="edu-school">TU Berlin · 2016 – 2021</p>
-            <p class="edu-desc" data-lang="en">Thesis: "Development and Testing of a Test Rig for Analysing the Aerodynamic Drag of a Tube Transport System" — FG Experimentelle Strömungsmechanik.</p>
-            <p class="edu-desc" data-lang="de">Abschlussarbeit: „Entwicklung und Erprobung eines Versuchsstandes zur Analyse des Luftwiderstandes eines Röhrentransportsystems".</p>
-          </div>
-          <div class="edu-grade">2,5<span><span data-lang="en" class="active lang-inline">Grade</span><span data-lang="de" class="lang-inline">Note</span></span></div>
-        </div>
-        <div class="edu-card">
-          <div>
-            <p class="edu-degree">Abitur</p>
-            <p class="edu-school">Paulsen-Gymnasium Berlin · 2010 – 2016</p>
-            <p class="edu-desc">LK: Mathematik (Note: 2), Physik (Note: 2)</p>
-          </div>
-          <div class="edu-grade">2,2<span><span data-lang="en" class="active lang-inline">Grade</span><span data-lang="de" class="lang-inline">Note</span></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+  <div data-include="sections/about.html"></div>
+  <div data-include="sections/skills.html"></div>
+  <div data-include="sections/projects.html"></div>
+  <div data-include="sections/experience.html"></div>
+  <div data-include="sections/education.html"></div>
 
   <!-- CONTACT -->
   <section id="contact">

@@ -44,3 +44,40 @@ document.addEventListener('DOMContentLoaded', () => {
   initFadeIn();
   initYear();
 });
+
+// 1. Function to fetch the external HTML files
+async function includeHTML() {
+    const elements = document.querySelectorAll('[data-include]');
+    
+    // We use a Map to wait for all fetches to complete
+    const fetchPromises = Array.from(elements).map(async (el) => {
+        const file = el.getAttribute('data-include');
+        try {
+            const response = await fetch(file);
+            if (response.ok) {
+                const html = await response.text();
+                el.outerHTML = html;
+            }
+        } catch (err) {
+            console.error("Could not load section:", file);
+        }
+    });
+
+    // Wait for ALL sections to be injected into the page
+    await Promise.all(fetchPromises);
+
+    // 2. NOW that the content exists, trigger your UI scripts
+    initLanguageSystem(); 
+    initFadeIn();
+
+}
+
+function initLanguageSystem() {
+    // Re-run your existing language toggle logic here
+    // This ensures it 'sees' the new About, Skills, and Project sections
+    console.log("Language system initialized on new content.");
+    // ... (Your existing DE/EN toggle code)
+}
+
+// Run the loader when the page first loads
+document.addEventListener('DOMContentLoaded', includeHTML);
