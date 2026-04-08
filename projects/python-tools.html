@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CFD Workflow Automation — Kevin Eichner de Lemos Lisboa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="container">
+      <a href="../index.html" class="nav-logo">KEL</a>
+      <div class="nav-links">
+        <a href="../index.html#projects"><span data-lang="en" class="active lang-inline">Projects</span><span data-lang="de" class="lang-inline">Projekte</span></a>
+        <a href="../index.html#contact">Contact</a>
+        <button class="lang-btn" id="lang-toggle">DE</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="detail-hero">
+    <div class="container">
+      <a href="../index.html#projects" class="detail-back"><span data-lang="en" class="active lang-inline">All projects</span><span data-lang="de" class="lang-inline">Alle Projekte</span></a>
+      <span class="detail-tag">Tool · Python · FaSTTUBe</span>
+      <h1 data-lang="en">CFD Workflow Automation Tools</h1>
+      <h1 data-lang="de">CFD Workflow-Automatisierungstools</h1>
+      <p class="lead" data-lang="en">A suite of Python scripts developed to automate CFD post-processing and data analysis within the FaSTTUBe aerodynamics team, significantly accelerating design iteration loops.</p>
+      <p class="lead" data-lang="de">Eine Sammlung von Python-Skripten zur Automatisierung der CFD-Nachverarbeitung und Datenanalyse im FaSTTUBe-Aerodynamikteam, die den Entwicklungsprozess deutlich beschleunigt.</p>
+      <div class="detail-meta-row">
+        <div class="detail-meta-item"><span class="dm-label"><span data-lang="en" class="active lang-inline">Context</span><span data-lang="de" class="lang-inline">Kontext</span></span><span class="dm-value">FaSTTUBe, TU Berlin</span></div>
+        <div class="detail-meta-item"><span class="dm-label">Stack</span><span class="dm-value">Python, MATLAB, STAR-CCM+</span></div>
+        <div class="detail-meta-item"><span class="dm-label"><span data-lang="en" class="active lang-inline">Purpose</span><span data-lang="de" class="lang-inline">Zweck</span></span><span class="dm-value"><span data-lang="en" class="active lang-inline">Automation &amp; data analysis</span><span data-lang="de" class="lang-inline">Automatisierung &amp; Datenanalyse</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="detail-image">
+      <div class="img-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <p><span data-lang="en" class="active lang-inline">Add image — e.g. pipeline diagram or data output screenshot</span><span data-lang="de" class="lang-inline">Bild hinzufügen — z.B. Pipeline-Diagramm oder Screenshot der Datenausgabe</span></p>
+      </div>
+    </div>
+
+    <div class="detail-highlights">
+      <div class="highlight-card">
+        <div class="hc-number">Python</div>
+        <div class="hc-label"><span data-lang="en" class="active lang-inline">Primary language</span><span data-lang="de" class="lang-inline">Hauptsprache</span></div>
+      </div>
+      <div class="highlight-card">
+        <div class="hc-number">Auto</div>
+        <div class="hc-label"><span data-lang="en" class="active lang-inline">Post-processing pipeline</span><span data-lang="de" class="lang-inline">Nachverarbeitungs-Pipeline</span></div>
+      </div>
+      <div class="highlight-card">
+        <div class="hc-number">CFD</div>
+        <div class="hc-label"><span data-lang="en" class="active lang-inline">Integrated with STAR-CCM+</span><span data-lang="de" class="lang-inline">Integriert mit STAR-CCM+</span></div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2><span data-lang="en" class="active lang-inline">Motivation</span><span data-lang="de" class="lang-inline">Motivation</span></h2>
+      <p data-lang="en">Running 120+ CFD simulations as part of my master's thesis — and dozens more over multiple Formula Student seasons — quickly highlighted how manual post-processing creates a bottleneck in the design loop. Each simulation produces large amounts of raw output data that need to be extracted, cleaned, visualised and compared.</p>
+      <p data-lang="de">Das Durchführen von 120+ CFD-Simulationen im Rahmen der Masterarbeit — und Dutzender weiterer über mehrere Formula-Student-Saisons — zeigte schnell, wie manuelle Nachverarbeitung zum Engpass im Entwicklungsprozess wird. Jede Simulation produziert große Mengen roher Ausgabedaten, die extrahiert, bereinigt, visualisiert und verglichen werden müssen.</p>
+    </div>
+
+    <div class="detail-section">
+      <h2><span data-lang="en" class="active lang-inline">What the tools do</span><span data-lang="de" class="lang-inline">Was die Tools leisten</span></h2>
+      <ul>
+        <li><span data-lang="en" class="active lang-inline">Automated extraction of force and pressure coefficients from STAR-CCM+ output files</span><span data-lang="de" class="lang-inline">Automatisierte Extraktion von Kraft- und Druckkoeffizienten aus STAR-CCM+-Ausgabedateien</span></li>
+        <li><span data-lang="en" class="active lang-inline">Batch comparison of simulation results across parameter sweeps (yaw angle, speed, configuration)</span><span data-lang="de" class="lang-inline">Batch-Vergleich von Simulationsergebnissen über Parametervariationen (Anströmwinkel, Geschwindigkeit, Konfiguration)</span></li>
+        <li><span data-lang="en" class="active lang-inline">Automated plot generation for standardised reporting</span><span data-lang="de" class="lang-inline">Automatisierte Diagrammerstellung für standardisierte Berichte</span></li>
+        <li><span data-lang="en" class="active lang-inline">Correlation analysis between CFD results and wind tunnel measurements</span><span data-lang="de" class="lang-inline">Korrelationsanalyse zwischen CFD-Ergebnissen und Windkanalmessungen</span></li>
+        <li><span data-lang="en" class="active lang-inline">Data pipeline from raw experimental sensor data (MATLAB) to summary statistics</span><span data-lang="de" class="lang-inline">Datenpipeline von rohen experimentellen Sensordaten (MATLAB) zu Zusammenfassungsstatistiken</span></li>
+      </ul>
+    </div>
+
+    <div class="detail-section">
+      <h2><span data-lang="en" class="active lang-inline">Screenshots / Output</span><span data-lang="de" class="lang-inline">Screenshots / Ausgabe</span></h2>
+      <div class="image-grid">
+        <div class="detail-image">
+          <div class="img-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <p><span data-lang="en" class="active lang-inline">Example output plot</span><span data-lang="de" class="lang-inline">Beispiel Ausgabediagramm</span></p>
+          </div>
+        </div>
+        <div class="detail-image">
+          <div class="img-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <p><span data-lang="en" class="active lang-inline">Correlation chart (CFD vs. experiment)</span><span data-lang="de" class="lang-inline">Korrelationsdiagramm (CFD vs. Experiment)</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>Kevin Eichner de Lemos Lisboa · Berlin · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
