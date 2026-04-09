@@ -25,14 +25,12 @@
         Formula Student Race Car</h1>
       <h1 data-lang="de">Kombinierte aerodynamische Untersuchung von Windkanalexperimenten und CFD-Simulationen eines
         Formula-Student-Rennwagens</h1>
-      <p class="lead" data-lang="en">A comprehensive correlation study between RANS simulations and real
-        wind tunnel data of a 1/3 scale Formula Student race car, examining over 120 test cases with varying flow
-        angles, vehicle speeds, and configurations.
-      </p>
-      <p class="lead" data-lang="de">Eine umfassende Korrelationsstudie zwischen RANS-Simulationen und
-        realen Windkanaldaten eines 1/3 Modells eines Formula-Student-Rennwagens. Es wurden über 120 Messfälle mit
-        verschiedenen Anströmwinkeln, Fahrtgeschwindigkeiten und
-        Fahrzeugkonfigurationen untersucht.</p>
+
+      <p class="lead" data-lang="en">A comprehensive correlation study between RANS simulations and real wind tunnel
+        data of a 1/3 scale Formula Student race car, examining over 120 test cases.</p>
+      <p class="lead" data-lang="de">Eine umfassende Korrelationsstudie zwischen RANS-Simulationen und realen
+        Windkanaldaten eines 1/3 Modells eines Formula-Student-Rennwagens mit über 120 Messfällen.</p>
+
       <div class="detail-meta-row">
         <div class="detail-meta-item"><span class="dm-label"><span data-lang="en"
               class="active lang-inline">Institution</span><span data-lang="de"
@@ -54,12 +52,10 @@
 
   <div class="container">
 
-    <!-- Main image -->
     <div class="detail-image">
       <img src="/images/msc-thesis/model_WT_smoke.jpg" alt="Windtunnel Model with Smoke Visualization">
     </div>
 
-    <!-- Highlights -->
     <div class="detail-highlights">
       <div class="highlight-card">
         <div class="hc-number">120+</div>
@@ -78,7 +74,6 @@
       </div>
     </div>
 
-    <!-- Background -->
     <div class="detail-section">
       <h2><span data-lang="en" class="active lang-inline">Background</span><span data-lang="de"
           class="lang-inline">Hintergrund</span></h2>
@@ -91,32 +86,20 @@
         untersucht, wie gut RANS-Simulationen in STAR-CCM+ reale Windkanalmessungen reproduzieren.</p>
     </div>
 
-    <!-- Methodology -->
     <div class="detail-section">
       <h2><span data-lang="en" class="active lang-inline">Methodology</span><span data-lang="de"
           class="lang-inline">Methodik</span></h2>
-      <p data-lang="en">The investigation utilized a 1/3 scale model of the FT23, designed and produced using additive
-        manufacturing to incorporate detailed aerodynamic geometry and integrated pressure taps. The experimental
-        campaign in the GroWiKa wind tunnel featured a parametric variation of yaw angles and flow velocities, capturing
-        aerodynamic forces, surface pressure distributions, and qualitative flow features via tufts and Flow-Vis-Paint.
-        Parallel RANS simulations were developed in STAR-CCM+, specifically configured to replicate wind tunnel boundary
-        conditions and stationary ground effects for a consistent "like-for-like" comparison. Data post-processing and
-        statistical correlation were executed in Python to identify the strengths and limitations of each approach.</p>
-
-      <p data-lang="de">Die Untersuchung nutzte ein 1/3-Modell des FT23, das mittels additiver Fertigung konstruiert
-        wurde, um detaillierte Geometrien und integrierte Druckmessstellen zu realisieren. Die Versuchsreihe im
-        GroWiKa-Windkanal umfasste eine parametrische Variation von Schiebewinkeln und Strömungsgeschwindigkeiten, wobei
-        aerodynamische Kräfte, Druckverteilungen und Strömungsstrukturen (mittels Wollfäden/Flow-Vis) erfasst wurden.
-        Parallel dazu wurden RANS-Simulationen in STAR-CCM+ entwickelt, die auf die Windkanal-Randbedingungen und
-        stationären Bodeneffekte abgestimmt waren. Die Nachverarbeitung und statistische Korrelation erfolgten in
-        Python, um die Stärken und Grenzen beider Methoden zu identifizieren.</p>
+      <p data-lang="en">The study featured a parametric variation of key conditions, including multiple yaw angles,
+        vehicle speeds, and aero-package configurations. Primary metrics included force and pressure measurements,
+        complemented by flow visualization using tufts and Flow-Vis-Paint.</p>
+      <p data-lang="de">Die Studie umfasste eine parametrische Variation von Testbedingungen wie Anströmwinkeln,
+        Geschwindigkeiten und Aero-Paket-Varianten. Primäre Messgrößen waren Kraft- und Druckmessungen, ergänzt durch
+        Strömungssichtbarmachung mittels Wollfäden und Flow-Vis-Paint.</p>
     </div>
 
-
-    <!-- Key results -->
     <div class="detail-section">
-      <h2><span data-lang="en" class="active lang-inline">Key results</span><span data-lang="de"
-          class="lang-inline">Wichtigste Ergebnisse</span></h2>
+      <h2><span data-lang="en" class="active lang-inline">Key Results</span><span data-lang="de"
+          class="lang-inline">Wichtige Ergebnisse</span></h2>
       <ul>
         <li><span data-lang="en" class="active lang-inline"><strong>Trend Correlation:</strong> Qualitative aerodynamic
             trends showed strong agreement between CFD and wind tunnel data.</span><span data-lang="de"
@@ -133,59 +116,30 @@
       </ul>
     </div>
 
-    <!-- Engineering challenges -->
     <div class="detail-section">
       <h2><span data-lang="en" class="active lang-inline">Engineering Challenges</span><span data-lang="de"
           class="lang-inline">Technische Herausforderungen</span></h2>
-      <p data-lang="en">Achieving a precise correlation between numerical and experimental results required overcoming
-        several high-level technical hurdles:</p>
-      <p data-lang="de">Um eine präzise Korrelation zwischen numerischen und experimentellen Ergebnissen zu erzielen,
-        mussten mehrere technische Hürden überwunden werden:</p>
-
-      <ul>
-        <li><span data-lang="en" class="active lang-inline"><strong>Simulating the Environment:</strong> Replicating the
-            specific GroWiKa wind tunnel boundary conditions and stationary ground effects within STAR-CCM+ to ensure a
-            "like-for-like" comparison.</span>
-          <span data-lang="de" class="lang-inline"><strong>Umgebungssimulation:</strong> Nachbildung der spezifischen
-            GroWiKa-Windkanal-Randbedingungen und stationären Bodeneffekte in STAR-CCM+, um einen direkten Vergleich zu
-            gewährleisten.</span>
-        </li>
-
-        <li><span data-lang="en" class="active lang-inline"><strong>Hardware Integration:</strong> Designing a 1:3 scale
-            model that was robust enough for high-velocity testing while integrating complex internal routing for
-            integrated pressure taps.</span>
-          <span data-lang="de" class="lang-inline"><strong>Hardware-Integration:</strong> Entwurf eines 1:3-Modells, das
-            robust genug für Hochgeschwindigkeitstests war und gleichzeitig komplexe interne Führungen für integrierte
-            Druckmessstellen enthielt.</span>
-        </li>
-
-        <li><span data-lang="en" class="active lang-inline"><strong>Discrepancy Analysis:</strong> Accounting for
-            quantitative deviations caused by physical model deformation under aerodynamic load and the inherent
-            limitations of RANS turbulence modeling.</span>
-          <span data-lang="de" class="lang-inline"><strong>Abweichungsanalyse:</strong> Berücksichtigung quantitativer
-            Abweichungen, die durch physische Modelldeformation unter aerodynamischer Last und die inhärenten
-            Einschränkungen der RANS-Turbulenzmodellierung entstanden sind.</span>
-        </li>
-      </ul>
+      <p data-lang="en">Precision correlation required addressing model deformation under high aerodynamic loads in the
+        wind tunnel, which was not initially present in the rigid CFD geometry. Furthermore, selecting appropriate
+        turbulence modeling for separated flow regions proved critical for quantitative accuracy.</p>
+      <p data-lang="de">Die präzise Korrelation erforderte die Berücksichtigung von Modelldeformationen unter hohen
+        Lasten im Windkanal, die in der starren CFD-Geometrie ursprünglich nicht vorhanden waren. Zudem erwies sich die
+        Wahl der Turbulenzmodellierung für abgelöste Strömungsbereiche als entscheidend.</p>
     </div>
 
-    <!-- Image grid -->
     <div class="detail-section">
-      <h2><span data-lang="en" class="active lang-inline">Figures</span><span data-lang="de"
-          class="lang-inline">Abbildungen</span></h2>
+      <h2><span data-lang="en" class="active lang-inline">Gallery</span><span data-lang="de"
+          class="lang-inline">Galerie</span></h2>
       <div class="image-grid">
         <div class="detail-image">
           <img src="/images/msc-thesis/WoolTufts_static.png" alt="Wool tufts on model">
+          <p><span data-lang="en" class="active lang-inline">Surface flow visualization</span><span data-lang="de"
+              class="lang-inline">Oberflächenströmungssichtbarmachung</span></p>
         </div>
         <div class="detail-image">
-          <img src="/images/msc-thesis/KMT23e_b01_v00_cfY_Back.png" alt="CFD Image of cf variable">
-        </div>
-        <div class="detail-image">
-          <img src="/images/msc-thesis/DSC09655.JPG" alt="Windtunnel Model">
-        </div>
-        <div class="detail-image">
-          <img src="/images/msc-thesis/P_compare_WT_CFD_RW_GF_a0_wing_Angle_0.0_Relative_chord_length_mean_c_p.png"
-            alt="Comparison of cp between CFD and Windtunnel">
+          <img src="/images/msc-thesis/KMT23e_b01_v00_cfY_Back.png" alt="CFD visualization">
+          <p><span data-lang="en" class="active lang-inline">STAR-CCM+ Post-processing</span><span data-lang="de"
+              class="lang-inline">STAR-CCM+ Nachverarbeitung</span></p>
         </div>
       </div>
     </div>
