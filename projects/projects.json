@@ -45,7 +45,7 @@
         "description_de": "Eine Python-Datenanalyse-Pipeline zur automatisierten aufbereitung von Experimentaldaten und CFD-Daten und zur anschließenden Datenanalyse und Visualisierung.",
         "highlights_en": "Python · Data analysis · STAR-CCM+",
         "highlights_de": "Python · Datenanalyse · STAR-CCM+",
-        "image": null
+        "image": "F_compare_RW_GF_noGF_velocity_A0_v0-35_Velocity_mean_c_f.png"
     },
     {
         "id": "bsc-thesis",
