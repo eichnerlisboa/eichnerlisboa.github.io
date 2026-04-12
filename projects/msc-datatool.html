@@ -110,10 +110,12 @@
         <span data-lang="en" class="active lang-inline">Motivation</span>
         <span data-lang="de" class="lang-inline">Motivation</span>
       </h2>
-      <p data-lang="en">Running 120+ CFD simulations as part of my master's thesis, quickly highlighted how manual
+      <p data-lang="en">Running 120+ Wind tunnel configurations and matching CFD simulations as part of my master's
+        thesis, quickly highlighted how manual
         post-processing creates a bottleneck in the data analysis. Each simulation and experiment produces large amounts
         of raw output data that need to be extracted, cleaned, visualized and compared.</p>
-      <p data-lang="de">Das Durchführen von 120+ CFD-Simulationen im Rahmen der Masterarbeit zeigte schnell, wie
+      <p data-lang="de">Das Durchführen von 120+ Windkanal-Konfigurationen und der Zuordnung CFD-Simulationen im Rahmen
+        der Masterarbeit zeigte schnell, wie
         manuelle Datennachbereitung zum Engpass im Auswertungsprozess wird. Jede Simulation und Experiment produziert
         große Mengen roher Ausgabedaten, die extrahiert, bereinigt, visualisiert und verglichen werden müssen.</p>
     </div>
@@ -148,7 +150,51 @@
         </li>
       </ul>
     </div>
+    <div class="detail-section">
+      <h2>
+        <span data-lang="en" class="active lang-inline">Technical Workflow</span>
+        <span data-lang="de" class="lang-inline">Technischer Workflow</span>
+      </h2>
+      <p data-lang="en">
+        This pipeline streamlines the analysis of over 120 test cases, transforming fragmented raw data into a
+        synchronized, config-driven environment for rigorous statistical correlation.
+      </p>
+      <p data-lang="de">
+        Diese Pipeline optimiert die Analyse von über 120 Messfällen und transformiert fragmentierte Rohdaten in eine
+        synchronisierte, konfigurationsgesteuerte Umgebung für eine präzise statistische Korrelation.
+      </p>
 
+      <ol class="workflow-list">
+        <li>
+          <strong data-lang="en">Data Ingestion & Pre-Processing:</strong>
+          <span data-lang="en">Wind tunnel sensor logs are converted into physical quantities, calculating time-series
+            statistics (mean/RMS), while CFD output files are restructured into a compatible post-processing format for
+            direct comparison.</span>
+          <span data-lang="de">Windkanal Sensordaten werden in physikalische Größen umgewandelt und
+            Zeitreihenstatistiken (Mittelwert/RMS) berechnet, während CFD-Ausgabedateien in ein kompatibles
+            Post-Processing-Format für den direkten Vergleich umstrukturiert werden.</span>
+        </li>
+        <li>
+          <strong data-lang="en">Config-Driven Analysis:</strong>
+          <span data-lang="en">A centralized configuration system manages dataset loading (WT vs. CFD), advanced
+            filtering (velocity, yaw angles, car configurations, ...), and plotting presets to ensure reproducibility
+            across
+            all 120+ cases.</span>
+          <span data-lang="de">Ein zentralisiertes Konfigurationssystem steuert das Laden der Datensätze (Windkanal vs.
+            CFD), erweitertes Filtern (Geschwindigkeit, Schiebewinkel, Fahrzeugkonfigurationen, ...) und Plot-Presets,
+            um die
+            Reproduzierbarkeit über alle 120+ Fälle zu gewährleisten.</span>
+        </li>
+        <li>
+          <strong data-lang="en">Automated Visualization & Export:</strong>
+          <span data-lang="en">The pipeline automatically generates comparative diagrams (e.g., $c_p$ distributions and
+            force polars) and exports statistical correlation tables.</span>
+          <span data-lang="de">Die Pipeline generiert automatisch Vergleichsdiagramme (z. B. $c_p$-Verteilungen und
+            Kraftpolaren) und exportiert statistische Korrelationstabellen.</span>
+        </li>
+      </ol>
+
+    </div>
     <div class="detail-section">
       <h2>
         <span data-lang="en" class="active lang-inline">Screenshots / Output</span>
