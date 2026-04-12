@@ -33,7 +33,7 @@
         "description_de": "Daten aufbereitung und ein Python-Tool zum interaktiven vergleichen und Visualisieren von Aerodynamischengrößen zwischen zwei Simulationen.",
         "highlights_en": "Python · Data analysis · STAR-CCM+",
         "highlights_de": "Python · Datenanalyse · STAR-CCM+",
-        "image": null
+        "image": "SM_view.png"
     },
     {
         "id": "msc-datatool",

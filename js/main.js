@@ -130,7 +130,7 @@ async function populateProjectMenu() {
   if (!container) return;
 
   try {
-    const response = await fetch('/projects.json');
+    const response = await fetch('/projects/projects.json');
     const projects = await response.json();
     const isDe = document.body.classList.contains('lang-de');
 
