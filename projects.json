@@ -1,0 +1,62 @@
+[
+    {
+        "id": "msc-thesis",
+        "title_en": "M.Sc. Thesis",
+        "title_de": "Masterarbeit",
+        "headline_en": "CFD & Wind Tunnel Correlation",
+        "headline_de": "CFD & Windkanal Korrelation",
+        "description_en": "Comprehensive RANS simulation correlated against wind tunnel data on a Formula Student race car. 120+ test cases.",
+        "description_de": "Umfassende Korrelationsstudie zwischen RANS-Simulationen und Windkanaldaten eines Formula-Student-Rennwagens.",
+        "highlights_en": "STAR-CCM+ · Windtunnel experiment · TU Berlin · 2025",
+        "highlights_de": "STAR-CCM+ · Windkanalexperiment · TU Berlin · 2025",
+        "image": "model_WT_smoke.jpg"
+    },
+    {
+        "id": "fasttube-aero",
+        "title_en": "FaSTTUBe Aero",
+        "title_de": "FaSTTUBe Aero",
+        "headline_en": "FaSTTUBe Aerodynamics Package",
+        "headline_de": "FaSTTUBe Aerodynamik-Paket",
+        "description_en": "Full aerodynamic development of the FaSTTUBe race car. Led a team of 15, achieved +25% downforce and 2nd place at FSAE Michigan.",
+        "description_de": "Entwicklung des kompletten Aerodynamik-Pakets des FaSTTUBe-Rennwagens. Teamleitung von 15 Personen, +25% Abtrieb.",
+        "highlights_en": "NX · STAR-CCM+ · 2021–present",
+        "highlights_de": "NX · STAR-CCM+ · 2021–aktuell",
+        "image": null
+    },
+    {
+        "id": "fasttube-imagetool",
+        "title_en": "Image comparison tool",
+        "title_de": "Bildvergleichstool",
+        "headline_en": "FaSTTUBe Image Comparison Tool",
+        "headline_de": "FaSTTUBe Bildvergleichstool",
+        "description_en": "Data post-processing and a python tool to interactively compare and visualize aerodynamic variable between two simulations.",
+        "description_de": "Daten aufbereitung und ein Python-Tool zum interaktiven vergleichen und Visualisieren von Aerodynamischengrößen zwischen zwei Simulationen.",
+        "highlights_en": "Python · Data analysis · STAR-CCM+",
+        "highlights_de": "Python · Datenanalyse · STAR-CCM+",
+        "image": null
+    },
+    {
+        "id": "msc-datatool",
+        "title_en": "Data Analysis Workflow",
+        "title_de": "Daten Auswertungs Workflow",
+        "headline_en": "Data Analysis Workflow M.Sc.",
+        "headline_de": "Daten Auswertungs Workflow M.Sc.",
+        "description_en": "A python data pipeline to automatically post process raw experimental data and CFD data and perform data analysis and visualization.",
+        "description_de": "Eine Python-Datenanalyse-Pipeline zur automatisierten aufbereitung von Experimentaldaten und CFD-Daten und zur anschließenden Datenanalyse und Visualisierung.",
+        "highlights_en": "Python · Data analysis · STAR-CCM+",
+        "highlights_de": "Python · Datenanalyse · STAR-CCM+",
+        "image": null
+    },
+    {
+        "id": "bsc-thesis",
+        "title_en": "B.Sc. Thesis",
+        "title_de": "Bachelorarbeit",
+        "headline_en": "Aerodynamic Drag of the Hyperloop",
+        "headline_de": "Luftwiderstand des Hyperloops",
+        "description_en": "Designed and built a custom test rig for measuring aerodynamic drag of a tube transport system at TU Berlin.",
+        "description_de": "Entwicklung und Erprobung eines Versuchsstandes zur Luftwiderstandsmessung eines Röhrentransportsystems.",
+        "highlights_en": "MATLAB · Windtunnel experiment · TU Berlin · 2021",
+        "highlights_de": "MATLAB · Windkanalexperiment · TU Berlin · 2021",
+        "image": "MS-Messung.jpg"
+    }
+]

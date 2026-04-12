@@ -14,44 +14,78 @@
 
 <body>
 
-  <header data-include="sections/header.html"></header>
+  <header data-include="/sections/header.html">
+  </header>
 
   <!-- HERO -->
-  <section id="hero">
-    <div class="container">
-      <div class="hero-inner">
-        <div class="avatar">KEL</div>
-        <div class="hero-text fade-in">
-          <h1>Kevin Eichner<br>de Lemos Lisboa</h1>
-          <p class="hero-subtitle">
-            <span data-lang="en" class="active lang-inline">Aerodynamics &amp; Simulation Engineer</span>
-            <span data-lang="de" class="lang-inline">Aerodynamiker und Simulationsingenieur</span>
-          </p>
-          <p class="hero-bio" data-lang="en">Combining CFD simulation with wind tunnel validation to deliver measurable
-            performance gains. M.Sc. Aerospace Engineering, TU Berlin. Former head of aerodynamics at FaSTTUBe Formula
-            Student team.</p>
-          <p class="hero-bio" data-lang="de">Als Aerodynamik-Ingenieur verbinde ich fundierte numerische
-            Strömungssimulation mit Windkanal-Validierung, um die Performance messbar zu steigern. M.Sc. Luft- und
-            Raumfahrttechnik, TU Berlin.</p>
-          <div class="hero-links">
-            <a href="https://www.linkedin.com/in/eichner-lisboa/" target="_blank" class="btn btn-primary">LinkedIn</a>
-            <a href="/docs/CV_Kevin_Eichner_Lisboa.pdf" data-lang="en" download class="btn btn-outline">
-              <span class="active lang-inline">Download CV</span>
-            </a>
-            <a href="/docs/Lebenslauf_Kevin_Eichner_Lisboa.pdf" data-lang="de" download class="btn btn-outline">
-              <span class="active lang-inline">Download Lebenslauf</span>
-            </a>
+  <section id="hero" class="hero-fullbleed">
+    <div class="hero-bg-img-wrap">
+      <img src="images/msc-thesis/model_WT_smoke.jpg" alt="Wind tunnel smoke visualisation" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="container hero-inner fade-in">
+      <div class="hero-text">
+        <div class="avatar-name-wrap">
+          <div class="avatar">
+            <img src="images/main/Profilbild.jpg" alt="KEL" />
           </div>
+
+          <div class="hero-header-content">
+            <h1>Kevin Eichner<br>de Lemos Lisboa</h1>
+            <p class="hero-subtitle">
+              <span data-lang="en" class="active lang-inline">Aerodynamics &amp; Simulation&nbspEngineer</span>
+              <span data-lang="de" class="lang-inline">Aerodynamiker und Simulationsingenieur</span>
+            </p>
+          </div>
+        </div>
+
+        <p class="hero-bio" data-lang="en">Combining CFD simulation with wind tunnel validation to deliver measurable
+          performance gains. M.Sc. Aerospace Engineering, TU Berlin. Former head of aerodynamics at FaSTTUBe Formula
+          Student team.</p>
+        <p class="hero-bio" data-lang="de">Als Aerodynamik-Ingenieur verbinde ich fundierte numerische
+          Strömungssimulation mit Windkanal-Validierung, um die Performance messbar zu steigern. M.Sc. Luft- und
+          Raumfahrttechnik, TU Berlin.</p>
+        <div class="hero-links">
+          <a href="https://www.linkedin.com/in/eichner-lisboa/" target="_blank" class="btn btn-primary">LinkedIn</a>
+          <a href="/docs/CV_Kevin_Eichner_Lisboa.pdf" data-lang="en" download class="btn btn-outline">
+            <span class="active lang-inline">Download CV</span>
+          </a>
+          <a href="/docs/Lebenslauf_Kevin_Eichner_Lisboa.pdf" data-lang="de" download class="btn btn-outline">
+            <span class="active lang-inline">Download Lebenslauf</span>
+          </a>
         </div>
       </div>
     </div>
+    <div class="hero-img-strip">
+      <div class="strip-item">
+        <img src="images/main/FT23e_b10_v00_cDf_Q_Front.png" alt="Wool tufts flow visualisation" />
+        <span data-lang="en" class="strip-label">Performance optimization · FaSTTUBe</span>
+        <span data-lang="de" class="strip-label">Leistungsverbesserung · FaSTTUBe</span>
+      </div>
+      <div class="strip-item">
+        <img src="images/msc-thesis/WoolTufts_static.png" alt="Wool tufts flow visualisation" />
+        <span class="strip-label" data-lang="en">Wind tunnel · TU Berlin</span>
+        <span class="strip-label" data-lang="de">Windkanal · TU Berlin</span>
+      </div>
+      <div class="strip-item strip-item--hide-mobile">
+        <img src="images/msc-thesis/KMT23e_b01_v00_cfY_Back.png" alt="CFD simulation" />
+        <span class="strip-label" data-lang="en">CFD simulation · STAR-CCM+</span>
+        <span class="strip-label" data-lang="de">CFD-Simulation · STAR-CCM+</span>
+      </div>
+    </div>
+    </div>
   </section>
 
-  <div data-include="sections/about.html"></div>
-  <div data-include="sections/skills.html"></div>
-  <div data-include="sections/projects.html"></div>
-  <div data-include="sections/experience.html"></div>
-  <div data-include="sections/education.html"></div>
+  <div data-include="/sections/about.html">
+  </div>
+  <div data-include="/sections/skills.html">
+  </div>
+  <div data-include="/sections/projects.html">
+  </div>
+  <div data-include="/sections/experience.html">
+  </div>
+  <div data-include="/sections/education.html">
+  </div>
 
 
   <!-- CONTACT -->
@@ -65,8 +99,10 @@
           Interesse an einer Zusammenarbeit oder eine Frage? Schreib mir eine Nachricht, ich melde mich zurück.</p>
         <div class="form-row">
           <div class="form-group">
-            <label for="contact-name"><span data-lang="en" class="active lang-inline">Name</span><span data-lang="de"
-                class="lang-inline">Name</span></label>
+            <label for="contact-name">
+              <span data-lang="en" class="active lang-inline">Name</span>
+              <span data-lang="de" class="lang-inline">Name</span>
+            </label>
             <input type="text" id="contact-name" placeholder="Your name" />
           </div>
           <div class="form-group">
@@ -75,34 +111,44 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="contact-subject"><span data-lang="en" class="active lang-inline">Subject</span><span
-              data-lang="de" class="lang-inline">Betreff</span></label>
+          <label for="contact-subject">
+            <span data-lang="en" class="active lang-inline">Subject</span>
+            <span data-lang="de" class="lang-inline">Betreff</span>
+          </label>
           <input type="text" id="contact-subject" placeholder="What's it about?" />
         </div>
         <div class="form-group">
-          <label for="contact-message"><span data-lang="en" class="active lang-inline">Message</span><span
-              data-lang="de" class="lang-inline">Nachricht</span></label>
-          <textarea id="contact-message" placeholder="Your message..."></textarea>
+          <label for="contact-message">
+            <span data-lang="en" class="active lang-inline">Message</span>
+            <span data-lang="de" class="lang-inline">Nachricht</span>
+          </label>
+          <textarea id="contact-message" placeholder="Your message...">
+</textarea>
         </div>
         <button class="btn btn-primary" id="send-btn">
           <span data-lang="en" class="active lang-inline">Send message</span>
           <span data-lang="de" class="lang-inline">Nachricht senden</span>
         </button>
         <p class="contact-note" data-lang="en">Prefer LinkedIn? Reach me at <a
-            href="https://www.linkedin.com/in/eichner-lisboa/" target="_blank">/in/eichner-lisboa/</a></p>
+            href="https://www.linkedin.com/in/eichner-lisboa/" target="_blank">/in/eichner-lisboa/</a>
+        </p>
         <p class="contact-note" data-lang="de">Lieber LinkedIn? <a href="https://www.linkedin.com/in/eichner-lisboa/"
-            target="_blank">/in/eichner-lisboa/</a></p>
+            target="_blank">/in/eichner-lisboa/</a>
+        </p>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>Kevin Eichner de Lemos Lisboa · Berlin · <span id="year"></span></p>
+      <p>Kevin Eichner de Lemos Lisboa · Berlin · <span id="year">
+        </span>
+      </p>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js">
+  </script>
   <script>
     document.getElementById('send-btn').addEventListener('click', () => {
       const name = document.getElementById('contact-name').value.trim();

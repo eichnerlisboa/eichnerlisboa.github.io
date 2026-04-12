@@ -101,6 +101,7 @@ nav {
   background: transparent;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+  margin-left: auto;
 }
 
 .lang-btn:hover {
@@ -174,22 +175,71 @@ section {
 
 /* ── HERO ── */
 #hero {
-  padding: 96px 0 80px;
+  padding: 0;
   border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-inner {
+.hero-fullbleed {
+  padding: 0 !important;
+}
+
+.hero-bg-img-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.32) saturate(0.6);
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(44, 44, 56, 0.88) 0%, rgba(44, 44, 56, 0.55) 55%, rgba(44, 44, 56, 0.15) 100%);
+}
+
+.hero-fullbleed .hero-inner {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 40px;
-  align-items: start;
+  align-items: center;
+  padding-top: 72px;
+  padding-bottom: 56px;
+}
+
+/* main content area */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 64px;
+  padding-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* top row: avatar + name side by side */
+.hero-top {
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
 
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   background: var(--navy);
+  border: 3px solid var(--blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,13 +256,18 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
+/* .hero-text-inner {
+  display: flex;
+  align-items: center;
+} */
 .hero-text h1 {
   font-size: 52px;
   font-weight: 700;
   line-height: 1.05;
-  color: var(--dark);
+  color: var(--white);
   margin-bottom: 6px;
 }
 
@@ -229,7 +284,7 @@ section {
 .hero-bio {
   font-size: var(--text_large);
   font-weight: 300;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.72);
   line-height: 1.7;
   max-width: 560px;
   margin-bottom: 24px;
@@ -239,6 +294,65 @@ section {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.hero-fullbleed .btn-outline {
+  color: var(--white);
+  border-color: var(--blue);
+}
+
+.hero-fullbleed .btn-outline:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+/* ── IMAGE STRIP ── */
+.hero-img-strip {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 120px;
+  border-top: 2px solid var(--navy);
+}
+
+.strip-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.strip-item:not(:last-child) {
+  border-right: 2px solid var(--white);
+}
+
+.strip-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.78) saturate(0.8);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.strip-item:hover img {
+  filter: brightness(0.95) saturate(1);
+  transform: scale(1.04);
+}
+
+.strip-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(44, 44, 56, 0.65);
+  padding: 5px 10px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(200, 214, 232, 0.95);
 }
 
 /* ── ABOUT ── */
@@ -961,7 +1075,7 @@ footer p {
   }
 
   .hero-text h1 {
-    font-size: 34px;
+    font-size: 42px;
   }
 
   .nav-links {
@@ -1038,6 +1152,241 @@ footer p {
     /* Put button after logo if needed */
   }
 
+  :root {
+    --navy: #2C446F;
+    --blue: #799ACC;
+    --dark: #2C2C38;
+    --light: #F4F7FB;
+    --border: #DDE4EF;
+    --white: #FFFFFF;
+    --text: #111111;
+    --muted: #6B7280;
+    --text_small: 12px;
+    --text_medium: 14px;
+    --text_large: 18px;
+    --header_height: 56px;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+    /* Prevent horizontal scroll which can break sticky headers */
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  nav,
+  .label {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  /* ── NAV & HEADER (Fixed Sticky Logic) ── */
+  header {
+    position: -webkit-sticky;
+    /* Safari support */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--white);
+    border-bottom: 2px solid var(--navy);
+  }
+
+  nav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: var(--header_height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Relative positioning for mobile menu absolute placement */
+    position: relative;
+  }
+
+  .nav-logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--navy);
+  }
+
+  .lang-btn {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: var(--text_medium);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    border: 1.5px solid var(--blue);
+    border-radius: 3px;
+    padding: 4px 12px;
+    color: var(--navy);
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .lang-btn:hover {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--navy);
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  section {
+    padding: 72px 0;
+    border-bottom: 1px solid var(--border);
+    /* Ensures section titles aren't hidden under sticky header */
+    scroll-margin-top: var(--header_height);
+  }
+
+  /* ... keep your BUTTONS, HERO, ABOUT, SKILLS, PROJECTS GRID, TIMELINE, EDUCATION, CONTACT styles exactly as you had them ... */
+
+  /* ── MOBILE TOGGLER ── */
+  .navbar-toggler {
+    display: none;
+    background: transparent;
+    border: 1.5px solid var(--blue);
+    border-radius: 3px;
+    color: var(--navy);
+    cursor: pointer;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── RESPONSIVE ── */
+
+  @media (max-width: 720px) {
+
+    /* Mobile Menu Logic */
+    .navbar-toggler {
+      display: flex;
+    }
+
+    .navbar-collapse {
+      display: none;
+      /* Controlled by .show via JS */
+      position: absolute;
+      top: var(--header_height);
+      left: 0;
+      width: 100%;
+      background: var(--white);
+      border-bottom: 2px solid var(--navy);
+      padding: 24px 32px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-collapse.show {
+      display: block;
+      animation: navSlideDown 0.3s ease-out forwards;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      width: 100%;
+      padding: 8px 0;
+      font-size: var(--text_large);
+    }
+
+    /* Existing Grid Layout Fixes */
+    .hero-inner,
+    .about-grid,
+    .projects-grid,
+    .detail-highlights,
+    .image-grid,
+    .tl-item {
+      grid-template-columns: 1fr;
+    }
+
+    .tl-date {
+      text-align: left;
+    }
+
+    .tl-spine {
+      display: none;
+    }
+
+    .hero-text h1 {
+      font-size: 34px;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 721px) {
+
+    /* Force Desktop Menu to show if user resizes window */
+    .navbar-collapse {
+      display: block !important;
+    }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes navSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ... keep FADE-IN and LANG logic ... */
   /* The Collapsible Menu Container */
   .navbar-collapse {
     display: none;
@@ -1097,4 +1446,297 @@ footer p {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ── PROJECT DROPDOWN ── */
+.project-dropdown {
+  position: relative;
+  display: inline-block;
+  font-size: var(--text_medium);
+  /* Hide the text, just for styling var(--text_medium);*/
+}
+
+.chevron {
+  font-size: var(--text_large);
+  margin-left: 4px;
+  vertical-align: middle;
+  transition: transform 0.2s;
+
+}
+
+.dropdown-content {
+  display: none;
+  /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  /* Sits right below the header */
+  left: 0;
+  min-width: 200px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--navy);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+  padding: 10px 0;
+}
+
+/* Desktop: Hide the mobile wrapper styling */
+.mobile-nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .mobile-nav-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* Links left, Toggle right */
+    align-items: center;
+    border-bottom: 1px solid transparent;
+  }
+
+  .nav-link-text {
+    flex: 1;
+    /* Takes up most of the space */
+    padding: 10px 0;
+    text-align: right;
+  }
+
+  .dropdown-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--navy);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Active state styling */
+  .project-dropdown.active .mobile-nav-wrapper {
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+
+/* ── PROJECT DROPDOWN HOVER (Desktop Only) ── */
+@media (min-width: 721px) {
+  .project-dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-dropdown:hover .chevron {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--navy);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* ── PROJECT DROPDOWN ACTIVE (Mobile Only) ── */
+@media (max-width: 720px) {
+
+  /* This ensures that on mobile, only the .active class from JS opens the menu */
+  .project-dropdown.active .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Remove any accidental hover triggers on mobile */
+  .project-dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  /* Re-show if active even if 'hovered' */
+  .project-dropdown.active:hover .dropdown-content {
+    display: flex;
+  }
+}
+
+/* Individual Dropdown Links */
+.dropdown-content a {
+  color: var(--dark) !important;
+  padding: 10px 20px !important;
+  text-transform: none !important;
+  /* Makes project titles more readable */
+  font-size: var(--text_medium) !important;
+  display: block;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background: var(--light);
+  color: var(--navy) !important;
+}
+
+/* Responsive Fix: On mobile, dropdowns usually click-to-expand or stack */
+@media (max-width: 720px) {
+  .dropdown-content {
+    position: static;
+    display: block;
+    /* Always visible in mobile menu or toggleable */
+    box-shadow: none;
+    border: none;
+    padding-left: 20px;
+    min-width: 100%;
+
+  }
+}
+
+@media (max-width: 720px) {
+
+  /* 1. Ensure the dropdown container fills the width */
+  .project-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 2. Align the "Projects" trigger with other links */
+  .dropdown-trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* Puts the chevron on the right */
+    align-items: centerightr;
+    justify-content: flex-end;
+    /* Aligns the chevron on the right */
+    padding: 8px 0;
+  }
+
+  /* 3. Hide the projects by default on mobile */
+  .dropdown-content {
+    display: none;
+    /* Hidden until toggled */
+    position: static;
+    /* Stack it vertically */
+    width: 100%;
+    background: var(--light);
+    /* Subtle background to show it's a sub-menu */
+    border: none;
+    border-left: 2px solid var(--navy);
+    /* Visual cue for nesting */
+    margin-top: 5px;
+    box-shadow: none;
+  }
+
+  /* 4. Show projects when parent has 'active' class (for mobile tap) */
+  .project-dropdown.active .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-content a {
+    padding: 12px 20px !important;
+    /* Larger touch targets */
+  }
+}
+
+@media (max-width: 720px) {
+
+  /* Animate the Chevron */
+  .chevron {
+    transition: transform 0.3s ease;
+    font-style: normal;
+    display: inline-block;
+  }
+}
+
+/* ── FIXED: Technical Workflow Numbering ── */
+/* This ensures the numbers show up and don't clash with your other list styles */
+.detail-section ol {
+  list-style: decimal;
+  /* Forces 1, 2, 3 */
+  margin: 20px 0 20px 25px;
+  /* Adds space for the numbers */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-section ol li {
+  font-size: var(--text_medium);
+  color: var(--dark);
+  padding-left: 10px;
+  /* Space between number and text */
+}
+
+.detail-section ol li strong {
+  color: var(--navy);
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── HERO RESPONSIVE ── */
+@media (max-width: 720px) {
+  .hero-content {
+    padding-top: 40px;
+    padding-bottom: 36px;
+    gap: 16px;
+  }
+
+  .hero-top {
+    gap: 18px;
+  }
+
+  .hero-top h1 {
+    font-size: 34px;
+  }
+
+
+
+  .hero-img-strip {
+    grid-template-columns: 1fr 1fr;
+    height: 90px;
+  }
+
+  .strip-item--hide-mobile {
+    display: none;
+  }
+
+  .strip-label {
+    font-size: 9px;
+  }
+
+}
+
+/* --- HERO ALIGNMENT --- */
+.avatar-name-wrap {
+  display: flex;
+  align-items: center;
+  /* Vertically centers image with the text block */
+  gap: 28px;
+  /* Space between image and text */
+  margin-bottom: 24px;
+}
+
+.hero-header-content h1 {
+  margin-bottom: 4px;
+  /* Reduces gap between name and subtitle */
+}
+
+.hero-header-content .hero-subtitle {
+  margin-bottom: 0;
+  /* Removes bottom margin since wrap handles spacing */
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 440px) {
+  .avatar-name-wrap {
+    flex-direction: column;
+    /* Stacks image on top of name on small phones */
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+
 }

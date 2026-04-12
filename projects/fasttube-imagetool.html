@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> FaSTTUBe Image comparison Tool — Kevin Eichner de Lemos Lisboa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+  <header data-include="/sections/header.html">
+  </header>
+
+  <div class="detail-hero">
+    <div class="container">
+      <a href="/index.html#projects" class="detail-back">
+        <span data-lang="en" class="active lang-inline">All
+          projects</span>
+        <span data-lang="de" class="lang-inline">Alle Projekte</span>
+      </a>
+      <span class="detail-tag">Tool · Python · FaSTTUBe</span>
+      <h1 data-lang="en">FaSTTUBe Image Comparison Tool</h1>
+      <h1 data-lang="de">FaSTTUBe Bildvergleichs-Tool</h1>
+      <p class="lead" data-lang="en">A specialized Python tool for interactive flow visualization, featuring automated
+        HPC data extraction, local physical value reconstruction, and multi-simulation delta calculation.</p>
+      <p class="lead" data-lang="de">Ein spezialisiertes Python Tool zur interaktiven Strömungsvisualisierung mit
+        automatisierter HPC-Datenextraktion, lokaler physikalischer Rekonstruktion und
+        Multi-Simulations-Delta-Berechnung.</p>
+      <div class="detail-meta-row">
+        <div class="detail-meta-item">
+          <span class="dm-label">
+            <span data-lang="en" class="active lang-inline">Context</span>
+            <span data-lang="de" class="lang-inline">Kontext</span>
+          </span>
+          <span class="dm-value">FaSTTUBe, TU Berlin</span>
+        </div>
+        <div class="detail-meta-item">
+          <span class="dm-label">Stack</span>
+          <span class="dm-value">Python, STAR-CCM+</span>
+        </div>
+        <div class="detail-meta-item">
+          <span class="dm-label">
+            <span data-lang="en" class="active lang-inline">Purpose</span>
+            <span data-lang="de" class="lang-inline">Zweck</span>
+          </span>
+          <span class="dm-value">
+            <span data-lang="en" class="active lang-inline">Data comparison</span>
+            <span data-lang="de" class="lang-inline">Datenvergleich</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="detail-image">
+      <div class="img-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <circle cx="8.5" cy="8.5" r="1.5" />
+          <path d="M21 15l-5-5L5 21" />
+        </svg>
+        <p>
+          <span data-lang="en" class="active lang-inline">Add image — e.g. pipeline diagram or data output
+            screenshot</span>
+          <span data-lang="de" class="lang-inline">Bild hinzufügen — z.B. Pipeline-Diagramm oder
+            Screenshot der Datenausgabe</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="detail-highlights">
+      <div class="highlight-card">
+        <div class="hc-number">Python</div>
+        <div class="hc-label">
+          <span data-lang="en" class="active lang-inline">Primary language</span>
+          <span data-lang="de" class="lang-inline">Hauptsprache</span>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="hc-number">
+          <span data-lang="en" class="active lang-inline">Data</span>
+          <span data-lang="de" class="lang-inline">Daten</span>
+        </div>
+        <div class="hc-label">
+          <span data-lang="en" class="active lang-inline">Comparison</span>
+          <span data-lang="de" class="lang-inline">Vergleich</span>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="hc-number">HPC</div>
+        <div class="hc-label">
+          <span data-lang="en" class="active lang-inline">Optimization</span>
+          <span data-lang="de" class="lang-inline">Optimierung</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2>
+        <span data-lang="en" class="active lang-inline">Motivation</span>
+        <span data-lang="de" class="lang-inline">Motivation</span>
+      </h2>
+      <p data-lang="en">
+        In a high-paced Formula Student development cycle, CFD engineers often run hundreds of simulations. The primary
+        bottleneck is rarely the solver itself, but the <strong>"Time to Insight."</strong> Transferring massive raw 3D
+        datasets from an HPC cluster to a local workstation for comparison is bandwidth-heavy and slow.
+        <br><br>
+        Traditional post-processing often relies on static images, which lack the interactivity needed to probe specific
+        values or adjust scales. I developed this tool to decouple heavy data processing from visualization, allowing
+        for <strong>instant, high-precision delta-analysis</strong> and synchronized exploration of flow fields without
+        the overhead of full 3D volume rendering.
+      </p>
+      <p data-lang="de">
+        In einem schnelllebigen Formula-Student-Entwicklungszyklus führen CFD-Ingenieure oft hunderte von Simulationen
+        durch. Der limitierende Faktor ist dabei selten der Solver selbst, sondern die <strong>„Time to
+          Insight“</strong>. Der Transfer riesiger 3D-Rohdatensätze vom HPC-Cluster zur lokalen Workstation für
+        Vergleiche ist bandbreitenintensiv und zeitaufwendig.
+        <br><br>
+        Herkömmliches Post-Processing beruht oft auf statischen Bilder, denen die nötige Interaktivität fehlt, um
+        spezifische Werte zu prüfen oder Skalierungen anzupassen. Ich habe dieses Tool entwickelt, um die schwere
+        Datenverarbeitung von der Visualisierung zu entkoppeln. Dies ermöglicht eine <strong>sofortige, hochpräzise
+          Delta-Analyse</strong> und die synchronisierte Untersuchung von Strömungsfeldern, ohne den Overhead eines
+        vollständigen 3D-Volumen-Renderings.
+      </p>
+    </div>
+
+    <div class="detail-section">
+      <h2>
+        <span data-lang="en" class="active lang-inline">Core Features</span>
+        <span data-lang="de" class="lang-inline">Kernfunktionen</span>
+      </h2>
+      <ul>
+        <li>
+          <span data-lang="en" class="active lang-inline">Interactive "Delta" visualization to instantly highlight
+            physical differences between two simulation runs.</span>
+          <span data-lang="de" class="lang-inline">Interaktive "Delta"-Visualisierung zur sofortigen Identifizierung
+            physikalischer Unterschiede zwischen zwei Simulationen.</span>
+        </li>
+        <li>
+          <span data-lang="en" class="active lang-inline">Dynamic colormapping and clipping for high-contrast analysis
+            of specific value ranges.</span>
+          <span data-lang="de" class="lang-inline">Dynamisches Colormapping und Clipping zur kontrastreichen Analyse
+            spezifischer Variablenbereiche.</span>
+        </li>
+        <li>
+          <span data-lang="en" class="active lang-inline">Synchronized domain navigation: Scroll through 3D slices (X,
+            Y, Z axes) simultaneously across multiple datasets.</span>
+          <span data-lang="de" class="lang-inline">Synchronisierte Domänen-Navigation: Gleichzeitiges Scrollen durch
+            3D-Schnittebenen (X-, Y-, Z-Achsen) über mehrere Datensätze hinweg.</span>
+        </li>
+        <li>
+          <span data-lang="en" class="active lang-inline">Advanced flow overlays including Streamlines, Line Integral
+            Convolution (LIC), and Vector Fields.</span>
+          <span data-lang="de" class="lang-inline">Erweiterte Strömungsüberlagerungen einschließlich Stromlinien, Line
+            Integral Convolution (LIC) und Vektorfeldern.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="detail-section">
+      <h2>
+        <span data-lang="en" class="active lang-inline">Technical Workflow</span>
+        <span data-lang="de" class="lang-inline">Technischer Workflow</span>
+      </h2>
+      <p data-lang="en">To maintain high precision without transferring gigabytes of raw simulation files, the tool
+        utilizes a decoupled approach that reconstructs physical data locally.</p>
+      <p data-lang="de">Um eine hohe Präzision ohne den Transfer von Gigabytes an Rohdaten zu gewährleisten, nutzt das
+        Tool einen entkoppelten Ansatz, der die physikalischen Daten lokal rekonstruiert.</p>
+
+      <ol>
+        <li>
+          <strong data-lang="en">HPC Export:</strong>
+          <span data-lang="en">Automated export of high-bit-depth grayscale images representing physical variables,
+            accompanied by metadata (min/max ranges and spatial coordinates).</span>
+          <span data-lang="de">Automatisierter Export von hochbitratigen Graustufenbildern, die physikalische Variablen
+            repräsentieren, inklusive Metadaten (Min/Max-Bereiche und räumliche Koordinaten).</span>
+        </li>
+        <li>
+          <strong data-lang="en">Local Reconstruction:</strong>
+          <span data-lang="en">The Python tool maps grayscale images back to physical values, allowing for live
+            re-colorization and precise probing of data points.</span>
+          <span data-lang="de">Das Python-Tool wandelt Graustufenbilder zurück in physikalische Werte um, was eine
+            Live-Einfärbung und das präzise Abfragen von Datenpunkten ermöglicht.</span>
+        </li>
+        <li>
+          <strong data-lang="en">Delta Calculation:</strong>
+          <span data-lang="en">The tool performs pixel-wise subtraction between two datasets. By mapping back to
+            physical units first, it ensures the delta reflects actual aerodynamic changes:</span>
+          <span data-lang="de">Das Tool führt eine pixelweise Subtraktion zwischen zwei Datensätzen durch. Durch die
+            vorherige Rückführung in physikalische Einheiten wird sichergestellt, dass das Delta tatsächliche
+            aerodynamische Änderungen widerspiegelt:</span>
+          <p data-lang="en">This allows for the use of Zero-Centered Diverging Colormaps (e.g.,
+            Blue-White-Red), making it instantly clear where a design change increased or decreased local pressure,
+            downforce or other physical parameters.</p>
+          <p data-lang="de">Dies ermöglicht die Verwendung von zentrierten, divergierenden Farbskalen
+            (z.
+            B. Blau-Weiß-Rot), wodurch sofort ersichtlich wird, wo eine Designänderung den lokalen Druck, die
+            Abtriebskraft oder andere physikalische Größe erhöht oder verringert hat.</p>
+
+
+        </li>
+      </ol>
+
+      <div class="detail-section">
+        <h2>
+          <span data-lang="en" class="active lang-inline">Gallery</span>
+          <span data-lang="de" class="lang-inline">Galerie</span>
+        </h2>
+        <div class="image-grid">
+          <div class="detail-image">
+            <div class="img-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5L5 21" />
+              </svg>
+              <p>
+                <span data-lang="en" class="active lang-inline">Race car photo</span>
+                <span data-lang="de" class="lang-inline">Foto des Rennwagens</span>
+              </p>
+            </div>
+          </div>
+          <div class="detail-image">
+            <div class="img-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5L5 21" />
+              </svg>
+              <p>
+                <span data-lang="en" class="active lang-inline">CFD visualisation (pressure / velocity)</span>
+                <span data-lang="de" class="lang-inline">CFD-Visualisierung (Druck / Geschwindigkeit)</span>
+              </p>
+            </div>
+          </div>
+          <div class="detail-image">
+            <div class="img-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5L5 21" />
+              </svg>
+              <p>
+                <span data-lang="en" class="active lang-inline">Aero components (front wing, diffuser)</span>
+                <span data-lang="de" class="lang-inline">Aerobauteile (Frontflügel, Diffusor)</span>
+              </p>
+            </div>
+          </div>
+          <div class="detail-image">
+            <div class="img-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5L5 21" />
+              </svg>
+              <p>
+                <span data-lang="en" class="active lang-inline">Team at FSAE Michigan</span>
+                <span data-lang="de" class="lang-inline">Team beim FSAE Michigan</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>Kevin Eichner de Lemos Lisboa · Berlin · <span id="year">
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js">
+  </script>
+</body>
+
+</html>

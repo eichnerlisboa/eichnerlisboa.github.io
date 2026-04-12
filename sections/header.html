@@ -1,22 +1,43 @@
-<nav class="container">
-    <a href="/index.html" class="nav-logo">KEL</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="nav-links">
-            <a href="/index.html#about"><span data-lang="en" class="active lang-inline">About</span><span data-lang="de"
-                    class="lang-inline">Über mich</span></a>
-            <a href="/index.html#projects"><span data-lang="en" class="active lang-inline">Projects</span><span
-                    data-lang="de" class="lang-inline">Projekte</span></a>
-            <a href="/index.html#skills">Skills</a>
-            <a href="/index.html#experience"><span data-lang="en" class="active lang-inline">Experience</span><span
-                    data-lang="de" class="lang-inline">Erfahrung</span></a>
-            <a href="/index.html#education"><span data-lang="en" class="active lang-inline">Education</span><span
-                    data-lang="de" class="lang-inline">Bildung</span></a>
-            <a href="/index.html#contact">Contact</a>
-            <button class="lang-btn" id="lang-toggle">DE</button>
+<header>
+    <nav class="container">
+        <a href="/index.html" class="nav-logo">KEL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="nav-links">
+                <a href="/index.html#about">
+                    <span data-lang="en" class="active lang-inline">About</span>
+                    <span data-lang="de" class="lang-inline">Über&nbspmich</span>
+                </a>
+
+                <div class="project-dropdown">
+                    <div class="mobile-nav-wrapper">
+                        <a href="/index.html#projects" class="nav-link-text">
+                            <span data-lang="en" class="active lang-inline">Projects</span>
+                            <span data-lang="de" class="lang-inline">Projekte</span>
+                        </a>
+                        <button type="button" class="dropdown-toggle-btn" aria-label="Toggle Submenu">
+                            <span class="chevron">▾</span>
+                        </button>
+                    </div>
+
+                    <div id="dynamic-project-menu-links" class="dropdown-content">
+                    </div>
+                </div>
+                <a href="/index.html#skills">Skills</a>
+                <a href="/index.html#experience">
+                    <span data-lang="en" class="active lang-inline">Experience</span>
+                    <span data-lang="de" class="lang-inline">Erfahrung</span>
+                </a>
+                <a href="/index.html#education">
+                    <span data-lang="en" class="active lang-inline">Education</span>
+                    <span data-lang="de" class="lang-inline">Bildung</span>
+                </a>
+                <a href="/index.html#contact">Contact</a>
+                <button class="lang-btn" id="lang-toggle">DE</button>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
 <!-- TODO keep this always at top -->
