@@ -179,7 +179,6 @@ async function populateProjectGrid() {
   } catch (err) {
     console.error("Error populating dropdown", err);
   }
-  print(container.innerHTML)
 }
 
 function setupMobileDropdown() {
