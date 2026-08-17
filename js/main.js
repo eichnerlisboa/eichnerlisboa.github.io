@@ -23,13 +23,17 @@ async function initGlobal() {
 
 
   // 2. Setup components that exist on the current page
-  populateProjectMenu();
-  populateProjectGrid();
+  await Promise.all([
+    populateProjectMenu(),
+    populateProjectGrid()
+  ]);
+
   setupMobileMenu();
   setupMobileDropdown();
   setupLinkClickListeners();
-  setupLanguageToggle();
   updateYear();
+
+  setupLanguageToggle();
 
 
   // 3. Trigger animations
@@ -38,6 +42,7 @@ async function initGlobal() {
   // Check if the URL has a hash (e.g., #skills) and scroll to it
   handleInitialScroll();
 
+  
 
 }
 document.addEventListener('DOMContentLoaded', initGlobal);
@@ -83,6 +88,7 @@ function setupMobileMenu() {
  * Language Toggle Logic
  */
 function setupLanguageToggle(defaultLang) {
+  console.log("transate")
   let lang = defaultLang || 'en';
   const btn = document.getElementById('lang-toggle');
   if (!btn) return;
@@ -132,12 +138,10 @@ async function populateProjectMenu() {
   try {
     const response = await fetch('/projects/projects.json');
     const projects = await response.json();
-    const isDe = document.body.classList.contains('lang-de');
 
     container.innerHTML = projects.map(project => `
-            <a href="/projects/${project.id}.html">
-                ${isDe ? project.title_de : project.title_en}
-            </a>
+            <a href="/projects/${project.id}.html" data-lang="en">${project.title_en}</a>
+            <a href="/projects/${project.id}.html" data-lang="de">${project.title_de}</a>
         `).join('');
   } catch (err) {
     console.error("Error populating dropdown", err);
@@ -152,27 +156,29 @@ async function populateProjectGrid() {
   try {
     const response = await fetch('/projects/projects.json');
     const projects = await response.json();
-    const isDe = document.body.classList.contains('lang-de');
 
     container.innerHTML = projects.map(project => `
       <a href="projects/${project.id}.html" class="project-card">
         <div class="project-thumb">
           <div class="detail-image">
-            <img src="/images/${project.id}/${project.image}" alt="${isDe ? project.title_de : project.title_en} image">
+            <img src="/images/${project.id}/${project.image}" alt="${project.title_en} image">
           </div>
         </div>
         <div class="project-body">
-          <span class="project-tag">${isDe ? project.title_de : project.title_en}</span>
-          <h3>${isDe ? project.headline_de : project.headline_en}</h3>
-          <p>${isDe ? project.description_de : project.description_en}</p>
+          <span class="project-tag" data-lang="en">${project.title_en}</span>
+          <span class="project-tag" data-lang="de">${project.title_de}</span>
+          <h3 data-lang="en">${project.headline_en}</h3>
+          <h3 data-lang="de">${project.headline_de}</h3>
+          <p data-lang="en">${project.description_en}</p>
+          <p data-lang="de">${project.description_de}</p>
           <p class="project-highlight">
-            <span class="lang-inline">${isDe ? project.highlights_de : project.highlights_en}</span>
+            <span class="lang-inline" data-lang="en>${ project.highlights_en}</span>
+            <span class="lang-inline" data-lang="de>${ project.highlights_de }</span>
           </p>
           <span class="read-more">
-<span data-lang="en" class="active lang-inline">Read more</span>
-<span data-lang="de"
-              class="lang-inline">Mehr lesen</span>
-</span>
+          <span data-lang="en" class="active lang-inline">Read more</span>
+          <span data-lang="de" class="lang-inline">Mehr lesen</span>
+          </span>
         </div>
       </a>
         `).join('');

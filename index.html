@@ -91,7 +91,8 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="container fade-in">
-      <p class="section-label">Contact</p>
+      <p class="section-label" data-lang="en">Contact</p>
+      <p class="section-label" data-lang="de">Kontakt</p>
       <div class="contact-form">
         <p style="font-size:15px;font-weight:300;color:var(--muted);margin-bottom:28px;line-height:1.7;" data-lang="en">
           Interested in working together or have a question? Send me a message and I'll get back to you.</p>
@@ -103,11 +104,13 @@
               <span data-lang="en" class="active lang-inline">Name</span>
               <span data-lang="de" class="lang-inline">Name</span>
             </label>
-            <input type="text" id="contact-name" placeholder="Your name" />
+            <input type="text" data-lang="en" id="contact-name" placeholder="Your name" />
+            <input type="text" data-lang="de" id="contact-name" placeholder="Dein Name" />
           </div>
           <div class="form-group">
             <label for="contact-email">Email</label>
-            <input type="email" id="contact-email" placeholder="your@email.com" />
+            <input type="email" data-lang="en" id="contact-email" placeholder="your@email.com" />
+            <input type="email" data-lang="de" id="contact-email" placeholder="deine@email.com" />
           </div>
         </div>
         <div class="form-group">
@@ -115,14 +118,16 @@
             <span data-lang="en" class="active lang-inline">Subject</span>
             <span data-lang="de" class="lang-inline">Betreff</span>
           </label>
-          <input type="text" id="contact-subject" placeholder="What's it about?" />
+          <input type="text" data-lang="en" id="contact-subject" placeholder="What's it about?" />
+          <input type="text" data-lang="de" id="contact-subject" placeholder="Worum geht's?" />
         </div>
         <div class="form-group">
           <label for="contact-message">
             <span data-lang="en" class="active lang-inline">Message</span>
             <span data-lang="de" class="lang-inline">Nachricht</span>
           </label>
-          <textarea id="contact-message" placeholder="Your message...">
+          <textarea id="contact-message" data-lang="en" placeholder="Your message...">
+          <textarea id="contact-message" data-lang="de" placeholder="Deine Nachricht...">
 </textarea>
         </div>
         <button class="btn btn-primary" id="send-btn">
